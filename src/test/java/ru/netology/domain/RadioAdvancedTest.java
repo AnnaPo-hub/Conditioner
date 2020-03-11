@@ -38,23 +38,14 @@ class RadioAdvancedTest {
         assertEquals(8, radio.changeTheStationByPrevButton());
     }
 
-
-//    public int increaseVolume() {
-//        if (currentVolume >= maxVolume) {
-//            return maxVolume;
-//        } else {
-//            currentVolume += 1;
-//            return currentVolume;}
-//    }
-
     @Test
-    void increaseVolume() {
+    void increaseVolumeUnderMinimum() {
         RadioAdvanced radio = new RadioAdvanced();
         assertEquals(6, radio.increaseVolume());
     }
 
     @Test
-    void increaseVolume1() {
+    void increaseVolumeAboveMinimum() {
         RadioAdvanced radio = new RadioAdvanced();
         radio.setCurrentVolume(11);
         assertEquals(10, radio.increaseVolume());
@@ -68,8 +59,7 @@ class RadioAdvancedTest {
 
 
     @Test
-// to review
-    void decreaseVolumeLessThanMinimun() {
+    void decreaseVolumeLessThanMin() {
         RadioAdvanced radio = new RadioAdvanced();
         radio.setCurrentVolume(-1);
         assertEquals(0, radio.decreaseVolume());
