@@ -91,13 +91,13 @@ class ConditionerTest {
         conditioner.setOn(true);
         assertEquals(true, conditioner.isOn());
     }
+
     @Test
     void shouldBeOff() {
         Conditioner conditioner = new Conditioner();
         conditioner.setOn(false);
         assertEquals(false, conditioner.isOn());
     }
-
 
 
 }
