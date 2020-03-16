@@ -1,51 +1,54 @@
 package ru.netology.domain;
 
-public class RadioAdvanced {
+public class Radio {
 
     private int currentVolume = 5;
-    private int currentRadioStation = 9;
+    int maxVolume = 10;
+    int minVolume = 0;
+    private int currentRadioStation = 5;
+    int maxRadioStation = 9;
+    int minRadioStation = 0;
+
 
     public int changeTheStationByRemoteControl(int intendedStation) {
-        currentRadioStation = intendedStation;
+        if (intendedStation <= 9 && intendedStation >= 0) {
+            currentRadioStation = intendedStation;
+        }
         return currentRadioStation;
     }
 
-    public int changeTheStationByNextButton() {
-        if (currentRadioStation == 9) {
-            return currentRadioStation = 0;
+
+    public void changeTheStationByNextButton() {
+        if (currentRadioStation == maxRadioStation) {
+            currentRadioStation = 0;
         } else {
             currentRadioStation += 1;
-            return currentRadioStation;
         }
     }
 
-    public int changeTheStationByPrevButton() {
-        if (currentRadioStation == 0) {
-            return currentRadioStation = 9;
+    public void changeTheStationByPrevButton() {
+        if (currentRadioStation == minRadioStation) {
+            currentRadioStation = 9;
         } else {
             currentRadioStation -= 1;
-            return currentRadioStation;
         }
     }
 
 
-    public int increaseVolume() {
-        int maxVolume = 10;
-        if (currentVolume >= maxVolume) {
-            return maxVolume;
+    public void increaseVolume() {
+        if (currentVolume == maxVolume) {
+            return;
         } else {
             currentVolume += 1;
-            return currentVolume;
         }
     }
 
-    public int decreaseVolume() {
-        int minVolume = 0;
-        if (currentVolume <= minVolume) {
-            return minVolume;
+    public void decreaseVolume() {
+        if (currentVolume == minVolume) {
+            return;
         } else {
             currentVolume -= 1;
-            return currentVolume;
+
         }
     }
 
