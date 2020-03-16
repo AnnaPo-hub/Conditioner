@@ -18,9 +18,9 @@ class ConditionerTest {
 
     void shouldIncreaseCurrentTemperatureInHeatCondition() {
         Conditioner conditioner = new Conditioner();
-        conditioner.setCurrentTemperature(40);
+        conditioner.setCurrentTemperature(32);
         conditioner.increaseCurrentTemperature();
-        assertEquals(40, conditioner.getCurrentTemperature());
+        assertEquals(32, conditioner.getCurrentTemperature());
     }
 
     @Test
@@ -34,55 +34,10 @@ class ConditionerTest {
 
     void shouldDecreaseCurrentTemperatureInColdConditions() {
         Conditioner conditioner = new Conditioner();
-        conditioner.setCurrentTemperature(-15);
+        conditioner.setCurrentTemperature(18);
         conditioner.decreaseCurrentTemperature();
-        assertEquals(-15, conditioner.getCurrentTemperature());
+        assertEquals(18, conditioner.getCurrentTemperature());
     }
-
-
-//    @Test
-//    void getMaxTemperature() {
-//        Conditioner conditioner = new Conditioner();
-//        assertEquals(32, conditioner.getMaxTemperature());
-//
-//    }
-//
-//
-//    @Test
-//    void getMinTemperature() {
-//        Conditioner conditioner = new Conditioner();
-//        assertEquals(18, conditioner.getMinTemperature());
-//    }
-//
-//
-//    @Test
-//    void getCurrentTemperature() {
-//        Conditioner conditioner = new Conditioner();
-//        assertEquals(22, conditioner.getCurrentTemperature());
-//    }
-//
-//    @Test
-//    void setCurrentTemperature() {
-//        Conditioner conditioner = new Conditioner();
-//        conditioner.setCurrentTemperature(24);
-//        assertEquals(24, conditioner.getCurrentTemperature());
-//    }
-//
-//
-//    @Test
-//    void shouldBeOn() {
-//        Conditioner conditioner = new Conditioner();
-//        conditioner.setOn(true);
-//        assertTrue(conditioner.isOn());
-//    }
-//
-//    @Test
-//    void shouldBeOff() {
-//        Conditioner conditioner = new Conditioner();
-//        conditioner.setOn(false);
-//        assertFalse(conditioner.isOn());
-//    }
-
 
 }
 
