@@ -7,11 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class RadioTest {
     Radio radio = new Radio();
 
-//    @Test
-//    public void shouldCheckSettingStationQuantity() {
-//        radio.setMaxRadioStation(11);
-//        assertEquals(11, radio.getMaxRadioStation());
-//    }
 
     @Test
     void shouldChangeTheStationByRemoteControl() {
