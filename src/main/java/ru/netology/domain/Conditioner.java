@@ -3,7 +3,6 @@ package ru.netology.domain;
 import lombok.Data;
 
 @Data
-
 public class Conditioner {
     private int currentTemperature = 22;
     private boolean on;
@@ -25,8 +24,6 @@ public class Conditioner {
             currentTemperature -= 1;
         }
     }
-
-
 }
 
 
