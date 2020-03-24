@@ -15,7 +15,6 @@ class ConditionerTest {
     }
 
     @Test
-
     void shouldIncreaseCurrentTemperatureInHeatCondition() {
         Conditioner conditioner = new Conditioner();
         conditioner.setCurrentTemperature(32);
@@ -31,7 +30,6 @@ class ConditionerTest {
     }
 
     @Test
-
     void shouldDecreaseCurrentTemperatureInColdConditions() {
         Conditioner conditioner = new Conditioner();
         conditioner.setCurrentTemperature(18);
